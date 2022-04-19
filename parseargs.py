@@ -1,0 +1,15 @@
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--dataset', type=str, default='ACM', help='Dataset')
+parser.add_argument('--epoch', type=int, default=40, help='Training Epochs')
+parser.add_argument('--node_dim', type=int, default=64, help='Node dimension')
+parser.add_argument('--num_channels', type=int, default=2, help='number of channels')
+parser.add_argument('--lr', type=float, default=0.005, help='learning rate')
+parser.add_argument('--weight_decay', type=float, default=0.001, help='l2 reg')
+parser.add_argument('--num_layers', type=int, default=2, help='number of layer')
+parser.add_argument('--norm', type=str, default='true', help='normalization')
+parser.add_argument('--adaptive_lr', type=str, default='false', help='adaptive learning rate')
+parser.add_argument('--batch_size', type=int,default=1024)
+parser.add_argument('--gpu', type=int,default=0, help="using gpu id")
+args = parser.parse_args(args=[])
